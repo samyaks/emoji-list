@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var listtableview: UITableView!
     
-    var emojis = ["😀","😍","🐼","🇮🇳", "💩", "👽"]
+    var emojis = ["😀","😍","🐼","🇮🇳", "💩", "👽", "🌞"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "moveSegway", sender: "😾")
+    }
+    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
